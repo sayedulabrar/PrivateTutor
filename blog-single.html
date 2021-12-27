@@ -8,7 +8,7 @@
   <title>Blog Single - Sailor Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -34,7 +34,27 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2FdB3Gu7CEiBvM4ggQjOrmiR6g9fAH_g",
+    authDomain: "tutorbd-8e9f2.firebaseapp.com",
+    databaseURL: "https://tutorbd-8e9f2-default-rtdb.firebaseio.com",
+    projectId: "tutorbd-8e9f2",
+    storageBucket: "tutorbd-8e9f2.appspot.com",
+    messagingSenderId: "191259202055",
+    appId: "1:191259202055:web:9ae66f6087de0568f510a2",
+    measurementId: "G-HNREDWZB2N"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+</script>
 
 <body>
 
