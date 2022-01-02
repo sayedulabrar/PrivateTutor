@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Blog Single - Sailor Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -38,24 +40,22 @@
 </head>
 <script>
   const firebaseConfig = {
-    apiKey: "AIzaSyA2FdB3Gu7CEiBvM4ggQjOrmiR6g9fAH_g",
-    authDomain: "tutorbd-8e9f2.firebaseapp.com",
-    databaseURL: "https://tutorbd-8e9f2-default-rtdb.firebaseio.com",
-    projectId: "tutorbd-8e9f2",
-    storageBucket: "tutorbd-8e9f2.appspot.com",
-    messagingSenderId: "191259202055",
-    appId: "1:191259202055:web:9ae66f6087de0568f510a2",
-    measurementId: "G-HNREDWZB2N"
+    apiKey: "AIzaSyBJXVYAdRx3JWVEZlHVMv77YmP4VON5Lvg",
+    authDomain: "tutor-cb6b1.firebaseapp.com",
+    databaseURL: "https://tutor-cb6b1-default-rtdb.firebaseio.com",
+    projectId: "tutor-cb6b1",
+    storageBucket: "tutor-cb6b1.appspot.com",
+    messagingSenderId: "469083525547",
+    appId: "1:469083525547:web:1e08594aca0a5252a742ee",
+    measurementId: "G-925C7PPY3M"
   };
 
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
 </script>
 
+<script src="new.js"></script>
 <body>
 
  <!-- Navbar Start -->
@@ -283,32 +283,48 @@ const app = initializeApp(firebaseConfig);
                 </div>
 
               </div><!-- End comment #4 -->
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
               <div class="reply-form">
                 <h4>Leave a Reply</h4>
                 <p>Your email address will not be published. Required fields are marked * </p>
-                <form action="">
+                <div action="">
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                      <input id="name"  type="text" class="form-control" placeholder="Your Name*">
                     </div>
                     <div class="col-md-6 form-group">
-                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                      <input id="email"  type="text" class="form-control" placeholder="Your Email*">
                     </div>
                   </div>
+                  
                   <div class="row">
                     <div class="col form-group">
-                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                      <input id="comment"  type="text" class="form-control" placeholder="Your Comment*">
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Post Comment</button>
+                  <button class="btn btn-primary" onclick="showw()">Post Comment</button>
 
-                </form>
+                </div>
+
+              </div>
+
+              <div id="id1">
 
               </div>
 
@@ -316,6 +332,28 @@ const app = initializeApp(firebaseConfig);
 
           </div><!-- End blog entries list -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
           <div class="col-lg-4">
 
             <div class="sidebar">
@@ -452,7 +490,7 @@ const app = initializeApp(firebaseConfig);
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
