@@ -1,106 +1,62 @@
-function search() 
-{
-    var id= document.getElementById("id").value;
-
-firebase.database().ref('User/'+ id).once('value').then(function(snapshot) {
-                if (snapshot.exists()) {
-                     var name_ = snapshot.val().name;
-                     var id_ = snapshot.val().id;
-                    var mail_ = snapshot.val().email;
-                      document.getElementById("name").value = name_;
-                      document.getElementById("id").value = id_;
-                      document.getElementById("email").value =  mail_;
-                }
-                else
-                {
-
-                }
-        }, function(error) {
-            if (error) {
-
-            } else {
-
-            }
-          });
-}
-
-// function delete_()
-// {
-//     var del_user = document.getElementById("for_del").value;
-//     let userRef = firebase.database().ref('User/' + del_user);
-//     userRef.remove();
-//     alert("Successfully Removed");
-// }
-// function all_student_view()
-// {
-
-//     firebase.database().ref('User/').once('value').then(function(snapshot) {
-//         snapshot.forEach(function(child) {
-//             var m= child.val().id;
-//             var n= child.val().name;
-//             var o= child.val().email;
-//             alert(m + " "+ n+ " "+ o);
 
 
-//         });
-//         }, function(error) {
-//             if (error) {
-//             } else {
-
-//             }
-//           });
-
-// }
+let result = [];
 
 function showw(e) {
-    var name = document.getElementById("name").value;
-    var comment= document.getElementById("comment").value;
-    var email= document.getElementById("email").value;
+  var name = document.getElementById("name").value;
+  var comment = document.getElementById("comment").value;
+  var email = document.getElementById("email").value;
 
-
-     firebase.database().ref('User/' + name).set({
-            name : name,
-            comment : comment,
-            email : email
-
-           
-          }, function(error) {
-            if (error) {
-              // The write failed...
-              console.log(error)
-            } else {
-                alert("DONE");
-              
-           
-            }
+  firebase
+    .database()
+    .ref("User/" + name)
+    .set(
+      {
+        name: name,
+        comment: comment,
+        email: email,
+       
+    
+      },
+      function (error) {
+        if (error) {
+          // The write failed...
+          console.log(error);
+        } else {
+          // alert("DONE");
+          result.push({
+            name,
+            comment,
+            email,
+            
+            
           });
+          
 
+          document.getElementById("id1").innerHTML = result
+            .map(
+              (el) =>
+              `<div class="comment-text">
+                <h4>
+                    <a href="">${el.name} </a> 
+                </h4>
+                <p>${el.email}</p> 
+                <h3>
+                    ${el.comment}
+                </h3>
+            </div>`
+                // `<div class="comment-text">
+                // <div  style="font-size: medium;font-weight: bolder;">
+                //     Name: 
+                //     <span class="ml-2">${el.name} Email: ${el.email}</span>
+                // </div>
+                // <div class="p-3 mb-2 bg-info text-white" style="font-size: medium;font-weight: lighter;"> ${el.comment}</div>
+                
+                // </div>`
+            )
+            .join("");
+        }
+      }
+    );
 
-
-        // var name= document.getElementById("name").value;
-
-        // firebase.database().ref('User/'+ name).once('value').then(function(snapshot) {
-        //         if (snapshot.exists()) {
-        //              var name_ = snapshot.val().name;
-        //              var comment_ = snapshot.val().comment;
-        //             var mail_ = snapshot.val().email;
-                    
-        //             let contdiv= document.getElementById("id1");
-        //             var node = document.createElement("h4");
-                    
-        //             node.appendChild(textnode);
-        //             document.getElementById("id1").appendChild(node);
-        //         }
-        //         else
-        //         {
-
-        //         }
-        // }, function(error) {
-        //     if (error) {
-
-        //     } else {
-
-        //     }
-        //   });
- } 
-
+}
