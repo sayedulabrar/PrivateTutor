@@ -31,6 +31,13 @@ function showw(e) {
             
             
           });
+
+
+
+          document.getElementById("name").value="";
+          document.getElementById("comment").value="";
+          document.getElementById("email").value="";
+
           
 
           document.getElementById("id1").innerHTML = result
