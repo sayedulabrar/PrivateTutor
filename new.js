@@ -51,7 +51,11 @@ function showw(e) {
                 //     <span class="ml-2">${el.name} Email: ${el.email}</span>
                 // </div>
                 // <div class="p-3 mb-2 bg-info text-white" style="font-size: medium;font-weight: lighter;"> ${el.comment}</div>
-                
+                // var date=new Date();  
+                // var day=date.getDate();  
+                // var month=date.getMonth()+1;  
+                // var year=date.getFullYear();  
+                // document.write("<br>Date is: "+day+"/"+month+"/"+year); 
                 // </div>`
             )
             .join("");
