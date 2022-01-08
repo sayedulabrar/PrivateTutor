@@ -1,4 +1,44 @@
+function showComment() {
+  firebase
+    .database()
+    .ref("User/")
+    .once("value")
+    .then(
+      function (snapshot) {
+        const res = [];
+        snapshot.forEach(function (child) {
+          var n = child.val().name;
+          var m = child.val().comment;
+          var o = child.val().email;
 
+          res.push({
+            n,
+            m,
+            o,
+          });
+        });
+        document.getElementById("id1").innerHTML = res
+          .map(
+            (el) =>
+              `<div class="comment-text">
+              <h4>
+                  <a href="">${el.n} </a> 
+              </h4>
+              <p>${el.m}</p> 
+              <h3>
+                  ${el.o}
+              </h3>
+          </div>`
+          )
+          .join("");
+      },
+      function (error) {
+        if (error) {
+        } else {
+        }
+      }
+    );
+}
 
 let result = [];
 
@@ -15,8 +55,6 @@ function showw(e) {
         name: name,
         comment: comment,
         email: email,
-       
-    
       },
       function (error) {
         if (error) {
@@ -28,22 +66,16 @@ function showw(e) {
             name,
             comment,
             email,
-            
-            
           });
 
+          document.getElementById("name").value = "";
+          document.getElementById("comment").value = "";
+          document.getElementById("email").value = "";
 
-
-          document.getElementById("name").value="";
-          document.getElementById("comment").value="";
-          document.getElementById("email").value="";
-
-          
-
-          document.getElementById("id1").innerHTML = result
+          document.getElementById("id2").innerHTML = result
             .map(
               (el) =>
-              `<div class="comment-text">
+                `<div class="comment-text">
                 <h4>
                     <a href="">${el.name} </a> 
                 </h4>
@@ -52,22 +84,9 @@ function showw(e) {
                     ${el.comment}
                 </h3>
             </div>`
-                // `<div class="comment-text">
-                // <div  style="font-size: medium;font-weight: bolder;">
-                //     Name: 
-                //     <span class="ml-2">${el.name} Email: ${el.email}</span>
-                // </div>
-                // <div class="p-3 mb-2 bg-info text-white" style="font-size: medium;font-weight: lighter;"> ${el.comment}</div>
-                // var date=new Date();  
-                // var day=date.getDate();  
-                // var month=date.getMonth()+1;  
-                // var year=date.getFullYear();  
-                // document.write("<br>Date is: "+day+"/"+month+"/"+year); 
-                // </div>`
             )
             .join("");
         }
       }
     );
-
 }
