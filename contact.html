@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
     <meta charset="utf-8">
     <title>Private Tutor - Online Education Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -25,6 +26,24 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+<script>
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD1Jh9ZNun3LEGSieB_e-cnLx5-ulYXgy4",
+    authDomain: "login-61029.firebaseapp.com",
+    databaseURL: "https://login-61029-default-rtdb.firebaseio.com",
+    projectId: "login-61029",
+    storageBucket: "login-61029.appspot.com",
+    messagingSenderId: "551441127494",
+    appId: "1:551441127494:web:62e23d85327a3aeb18d247",
+    measurementId: "G-NHJNFSP6MC"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig)
+</script>
+<script src="new.js"></script>
 <body>
     
 
@@ -119,27 +138,37 @@
                         <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Need Help?</h6>
                         <h1 class="display-4">Send Us A Message</h1>
                     </div>
+
+
+
+
+
                     <div class="contact-form">
-                        <form>
+                        <div>
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
+                                    <input type="text" id="Name" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
                                 </div>
                                 <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
+                                    <input type="email" id="Email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
+                                <input type="text" id="Sub" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
+                                <textarea id="Mes" class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn btn-primary py-3 px-5" onclick="showed()">Send Message</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
