@@ -169,14 +169,13 @@ function moment() {
 
 
 
-
     function showed() {
 
       var name = document.getElementById("Name").value;
       var sub= document.getElementById("Sub").value;
       var email= document.getElementById("Email").value;
       var mes= document.getElementById("Mes").value;
-
+  
       
       
   
@@ -193,7 +192,7 @@ function moment() {
                 document.getElementById("Sub").value = "";
                 document.getElementById("Email").value = "";
                 document.getElementById("Mes").value="";
-
+  
                   alert("DONE");
                 
              
@@ -201,6 +200,34 @@ function moment() {
             });
      
    } 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

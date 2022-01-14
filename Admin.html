@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
     <meta charset="utf-8">
     <title>Private Tutor - Online Education Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -10,7 +11,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
@@ -21,13 +22,32 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+<script>
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD1Jh9ZNun3LEGSieB_e-cnLx5-ulYXgy4",
+    authDomain: "login-61029.firebaseapp.com",
+    databaseURL: "https://login-61029-default-rtdb.firebaseio.com",
+    projectId: "login-61029",
+    storageBucket: "login-61029.appspot.com",
+    messagingSenderId: "551441127494",
+    appId: "1:551441127494:web:62e23d85327a3aeb18d247",
+    measurementId: "G-NHJNFSP6MC"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig)
+</script>
+<script src="new2.js"></script>
 <body>
     
-
 
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
@@ -44,16 +64,17 @@
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="course.html" class="nav-item nav-link">Courses</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="detail.html" class="dropdown-item">Course Detail</a>
                             <a href="feature.html" class="dropdown-item">Our Features</a>
                             <a href="team.html" class="dropdown-item">Instructors</a>
-                            <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
+
                     <a href="blog.html" class="nav-item nav-link">Blog</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
                 
             </div>
@@ -62,68 +83,154 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-1">Testimonial</h1>
-            <div class="d-inline-flex text-white mb-5">
-                <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">Testimonial</p>
-            </div>
+    
+<!-- Header Start -->
+<div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
+    <div class="container text-center py-5">
+        <h1 class="text-white display-1">Admin Page</h1>
+        <div class="d-inline-flex text-white mb-5">
+            <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase">Messages</p>
+        </div>
 
+    </div>
+</div>
+<!-- Header End -->
+
+
+
+<div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
+    <img  src="img/p.jpg" alt="Image" style="height: 250px;width: 300px;margin-left:525px;margin-top: 20px;">
+    <h1 class="m" style="margin-left: 0%;">Sayedul Abrar</h1>
+    <div class="mb-4" style="height: 22px;">
+        <h4 class="typed-text-output d-inline-block text-body"></h4>
+        <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+    </div>
+    <div class="d-flex justify-content-center mt-auto mb-3">
+        <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="mx-2" href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="d-flex align-items-end justify-content-between">
+        
+    </div>
+    </div>
+    <!-- About Start -->
+    <div class="container bg-white py-5">
+    <div class="row px-3">
+        <div class="col-12">
+            <h2 class="title position-relative pb-2 mb-4">About Me</h2>
+        </div>
+        <div class="col-12">
+            <p>Hello I am Sayedul Abrar. I am a front-end website developer and mostly I am passionate on web coding. I’m quite expert in using coding and markup languages like:
+    
+                Hypertext markup language (HTML)
+                Cascading Style Sheet
+                Java, C++
+                I have completed my graduation in Software Engineering and also done many courses related to web designing, coding, and programming. My three years of experience helped me to understand the business tricks. Now I can easily cope up with the business market and understand the consumers’ needs.</p>
+            
         </div>
     </div>
-    <!-- Header End -->
-
-    <div style="margin-top: 200px;"></div>
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="section-title position-relative mb-4"data-aos="flip-right"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
-                        <h1 class="display-4">What Say Our Students</h1>
-                    </div>
-                    <p class="m-0">Dolor est dolores et nonumy sit labore dolores est sed rebum amet, justo duo ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
-                </div>
-                <div class="col-lg-7"data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-                >
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="bg-light p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="img/testimonial-2.jpg" alt="">
-                                <div>
-                                    <h5>Student Name</h5>
-                                    <span>Web Design</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-light p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="img/testimonial-1.jpg" alt="">
-                                <div>
-                                    <h5>Student Name</h5>
-                                    <span>Web Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <!-- About End -->
+    
+    
+    <!-- Skills Start -->
+    <div class="container bg-white py-5">
+    <div class="row pt-3 mx-0">
+        <div class="col-3 px-0"data-aos="fade-left"data-aos-offset="100"
+    data-aos-duration="500">
+            <div class="bg-success text-center p-4">
+                <h1 class="text-white" data-toggle="counter-up">900</h1>
+                <h6 class="text-uppercase text-white">Current<span class="d-block">Members</span></h6>
+            </div>
+        </div>
+        <div class="col-3 px-0"data-aos="fade-left"data-aos-offset="100"
+    data-aos-duration="500">
+            <div class="bg-primary text-center p-4">
+                <h1 class="text-white" data-toggle="counter-up">800</h1>
+                <h6 class="text-uppercase text-white">Available<span class="d-block">Teachers</span></h6>
+            </div>
+        </div>
+        <div class="col-3 px-0"data-aos="fade-right"data-aos-offset="100"
+    data-aos-duration="500">
+            <div class="bg-secondary text-center p-4">
+                <h1 class="text-white" data-toggle="counter-up">655</h1>
+                <h6 class="text-uppercase text-white">Course<span class="d-block">Sold</span></h6>
+            </div>
+        </div>
+        <div class="col-3 px-0"data-aos="fade-right"data-aos-offset="100"
+    data-aos-duration="500">
+            <div class="bg-warning text-center p-4">
+                <h1 class="text-white" data-toggle="counter-up">1230</h1>
+                <h6 class="text-uppercase text-white">Happy<span class="d-block">Students</span></h6>
             </div>
         </div>
     </div>
-    <!-- Testimonial Start -->
+    </div>
+    <!-- Skills End -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="blog-comments">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="reply-form">
+      
+      <p>Messages that are recived * </p>
+      <button class="btn btn-primary" onclick="todo()" style="margin-left: 10px;">Show Message</button>
+      <button class="btn btn-primary" onclick="hide()" style="margin-left: 10px;">Hide Message</button>
+    
+    </div>
+    
+    <div id="iii" style="margin-top: 20px;">
+      <h2 class="text-primary">Messages</h2>
+    
+    </div>
+    
+    <div id="goo">
+      
+    </div>
+    
+    <div id="id1" style="margin-top: 20px;">
+      
+    
+    </div>
+    
+    
+    
+    </div><!-- End blog comments -->
+
+
+
 
   <!-- Footer Start -->
   <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
@@ -175,7 +282,6 @@
 </div>
 
 <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
