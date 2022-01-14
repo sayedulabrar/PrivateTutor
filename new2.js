@@ -95,7 +95,7 @@ function admin(e) {
   var x = document.getElementById("user").value;
   var y = document.getElementById("pass").value;
 
-  if (x == "Sayedul Abrar" && y == "1234") {
+  if (x == "Sayedul abrar" && y == "1234") {
     window.location.replace("Admin.html");
   }
 }
